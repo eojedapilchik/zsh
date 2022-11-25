@@ -1,5 +1,5 @@
 ZSH_THEME="powerlevel9k/powerlevel9k"
-plugins=(git virtualenv)
+plugins=(git virtualenv z timer zsh-autosuggestions web-search dirhistory)
 # POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv battery)
@@ -85,7 +85,6 @@ export ZSH=$HOME/.oh-my-zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -128,4 +127,5 @@ alias brighta='cd /home/eojedapilchik/Documents/Desarrollos/Clientes/BrightAnswe
 # BEGIN SNIPPET: Platform.sh CLI configuration
 HOME=${HOME:-'/home/eojedapilchik'}
 export PATH="$HOME/"'.platformsh/bin':"$PATH"
+export PATH="/usr/local/go/bin:$PATH"
 if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
